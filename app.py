@@ -471,4 +471,4 @@ def display_page(pathname):
     # You could also return a 404 "URL not found" page here
 
 if __name__ == '__main__':
-    app.run_server(debug=True, use_reloader=False, host = '127.0.0.1')  # Turn off reloader if inside Jupyter
+    app.run_server(debug=True)  # Turn off reloader if inside Jupyter
