@@ -9,13 +9,14 @@ import pandas as pd
 #### plotly&dash packages
 import dash
 import plotly.graph_objects as go
-from plotly.offline import iplot
 import plotly.express as px
-# import dash_core_components as dcc
-# import dash_html_components as html
-from dash import dcc
-from dash import html
+import dash_core_components as dcc
+import dash_html_components as html
+# from dash import dcc
+# from dash import html
 from dash.dependencies import Input, Output
+
+from prophet import Prophet
 
 #############################################################################
 #### load data ##############################################################
@@ -225,7 +226,6 @@ fig_volume.update_xaxes(
 ###########################################################################
 ##### Time series predict #################################################
 ###########################################################################
-from prophet import Prophet
 
 def time_series(df):
 

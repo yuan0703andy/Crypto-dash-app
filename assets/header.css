@@ -1,0 +1,127 @@
+* {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+.Topbar {
+  position: fixed;
+  height: 60px;
+  width: 100%;
+  background-color: #ffe6c3;
+  color: white;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.Sidebar {
+  position: fixed;
+  height: 100%;
+  padding-top: 60px;
+  width: 10%;
+  background-color: #ffe4b0;
+  -webkit-box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 0 4px 0 rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.Sidebar ul {
+  width: 100%;
+}
+
+.Sidebar ul li {
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.5);
+  list-style-type: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Sidebar ul li .lin {
+  color: #4d4d4d;
+  font-size: small;
+  font-weight: bolder;
+  height: 50px;
+  text-align: center;
+  padding-top: 5px;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  display: block;
+}
+
+.Sidebar ul li:hover,
+.Sidebar ul li:focus,
+.Sidebar ul .lin:hover {
+  color: white;
+  -webkit-box-shadow: inset 6.5em 0 0 0 var(--hover);
+          box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+.Main {
+  position: fixed;
+  width: 90%;
+  height: 100%;
+  right: 0;
+  background-color: #fff0da;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+}
+
+.Main .Plot1 {
+  overflow: hidden;
+}
+
+.Main .Plot2 {
+  overflow: hidden;
+}
+
+.Main .Plot3 {
+  padding: 0 5px 0 5px;
+  overflow: hidden;
+}
+
+.About {
+  position: fixed;
+  padding: 100px 0px 0px 50px;
+  width: 90%;
+  height: 100%;
+  right: 0;
+  background-color: #fff0da;
+  z-index: -1;
+}
+/*# sourceMappingURL=header.css.map */
