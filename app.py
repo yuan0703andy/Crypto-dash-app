@@ -1,7 +1,6 @@
 #### basic packages
 import warnings
 warnings.filterwarnings("ignore")
-import os
 
 #### computation packages
 import numpy as np
@@ -25,13 +24,6 @@ path = "/Users/andy/Desktop/py_project/kaggle/G-Research/data"
 
 details = pd.read_csv(path + "/asset_details.csv")
 train = pd.read_csv(path + "/train.csv")
-
-
-test = pd.read_csv(path + "/test.csv")
-test['ds'] = pd.to_datetime(test['Date'])
-
-df_real = test.merge(df_forecast[1359:1451], on='ds', how='left').drop('Date', axis = 1).dropna()
-
 
 
 # modify the label
@@ -252,6 +244,9 @@ def time_series(df):
     return df_prophet, df_forecast
 
 df_prophet, df_forecast = time_series(bitcoin)
+test = pd.read_csv(path + "/test.csv")
+test['ds'] = pd.to_datetime(test['Date'])
+df_real = test.merge(df_forecast[1359:1451], on='ds', how='left').drop('Date', axis = 1).dropna()
 
 trace_open = go.Scatter(
     x = df_forecast["ds"],
@@ -476,4 +471,4 @@ def display_page(pathname):
     # You could also return a 404 "URL not found" page here
 
 if __name__ == '__main__':
-    app.server(host='0.0.0.0', port=8080, debug=True)  # Turn off reloader if inside Jupyter
+    app.run_server(debug=True, use_reloader=False, host = '127.0.0.1')  # Turn off reloader if inside Jupyter
