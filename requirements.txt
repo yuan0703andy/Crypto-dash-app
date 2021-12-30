@@ -1,5 +1,4 @@
-arviz==0.11.4                 
-blas==1.0                         
+arviz==0.11.4                                        
 brotli==1.0.9                    
 brotli-bin==1.0.9                    
 brotli-python==1.0.9            
